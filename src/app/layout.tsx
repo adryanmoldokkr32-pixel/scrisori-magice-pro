@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+// ScrisoriMagice PRO+ Build
 export const metadata: Metadata = {
   title: "ScrisoriMagice | Singura scrisoare digitală care prinde viață",
   description: "Creează scrisori de dragoste animate și personalizate. O experiență premium, acum gratuită. Trimite magia mai departe!",
