@@ -1,33 +1,19 @@
-@import "tailwindcss";
-
-@theme {
-  --color-bg-primary: #0a0a0f;
-  --color-bg-secondary: #12121a;
-  --color-accent-gold: #d4a853;
-  --color-accent-rose: #e8457a;
-  --color-accent-pink: #ffb7c5;
-  --color-accent-blush: #ff6b9d;
-  --color-text-primary: #f0e6d3;
-  --color-text-muted: #8a8a9a;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --font-heading: 'Playfair Display', serif;
-  --font-body: 'Inter', sans-serif;
-  --font-script: 'Dancing Script', cursive;
+  --background: #0a0a0f;
+  --foreground: #f0e6d3;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 html, body {
   overflow-x: hidden;
-  background: var(--color-bg-primary);
-  color: var(--color-text-primary);
+  background: #0a0a0f;
+  color: #f0e6d3;
 }
-
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--color-bg-primary); }
-::-webkit-scrollbar-thumb { background: var(--color-accent-gold); border-radius: 3px; }
 
 /* ---- Glow effects ---- */
 .glow-text {
@@ -43,7 +29,7 @@ html, body {
 .gradient-border { position: relative; }
 .gradient-border::before {
   content: ''; position: absolute; inset: 0; border-radius: inherit; padding: 1px;
-  background: linear-gradient(135deg, var(--color-accent-gold), var(--color-accent-rose), var(--color-accent-gold));
+  background: linear-gradient(135deg, #d4a853, #e8457a, #d4a853);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none;
 }
@@ -55,7 +41,7 @@ html, body {
 }
 @media (min-width: 640px) { .letter-envelope { width: 420px; height: 280px; } }
 
-.letter-flap {
+.envelope-flap {
   position: absolute; top: 0; left: 0; width: 100%; height: 50%;
   transform-origin: top center; transform-style: preserve-3d; z-index: 10;
 }
@@ -94,7 +80,7 @@ html, body {
 }
 .falling-petal {
   position: fixed; pointer-events: none; z-index: 25;
-  animation: petal-fall linear forwards;
+  animation: petal-fall 6s linear forwards;
 }
 
 /* ---- Rose petals (enhanced) ---- */
@@ -111,7 +97,6 @@ html, body {
 
 /* ---- Bloom glow overlay ---- */
 .bloom-glow {
-  filter: blur(0px);
   position: relative;
 }
 .bloom-glow::after {
@@ -124,7 +109,6 @@ html, body {
   50% { opacity: 0.8; transform: scale(1.15); }
 }
 
-/* Tree bloom glow */
 .tree-bloom::after {
   content: ''; position: absolute; inset: -40px; border-radius: 50%;
   background: radial-gradient(ellipse, rgba(255,183,197,0.2) 0%, transparent 70%);
