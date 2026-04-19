@@ -13,19 +13,19 @@
     "@remotion/cli": "^4.0.263",
     "@remotion/renderer": "^4.0.263",
     "gsap": "^3.12.5",
-    "next": "15.0.3",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "next": "15.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "remotion": "^4.0.263",
     "three": "^0.171.0"
   },
   "devDependencies": {
     "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.16",
-    "typescript": "^5"
+    "typescript": "^5.7.2"
   }
 }
